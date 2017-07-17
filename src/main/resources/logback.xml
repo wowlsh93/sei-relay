@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder>
+            <pattern>%date %level %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!--   기본 로깅
+   <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+       <file>logs/testakka222.log</file>
+       <append>true</append>
+       <encoder>
+           <pattern>%date{yyyy-MM-dd} %X{akkaTimestamp} %-5level[%thread] %logger{1} - %msg%n</pattern>
+       </encoder>
+   </appender>
+    -->
+
+    <!-- 용량이 차면 압축해주는 로깅
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/hello.log</file>
+        <encoder>
+            <pattern>%date %level %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <maxIndex>100</maxIndex>
+            <FileNamePattern>logs/hello.log.%i.gz</FileNamePattern>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>10MB</maxFileSize>
+        </triggeringPolicy>
+    </appender>
+    -->
+
+    <!-- 최근 날짜의 로그만 저장해 놓는 로깅-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/home/starkoff/work/sei-relay/logs/SEIRelay.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/home/starkoff/work/sei-relay/logs/SEIRelay.%d{dd-MM-yyyy}.log.gz</fileNamePattern>
+
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%date %level %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="akka" level="DEBUG" />
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
