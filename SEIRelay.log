@@ -1,0 +1,178 @@
+2017-05-11 17:33:42,948 INFO ....................relaySystem start !!....................
+2017-05-11 17:33:44,594 INFO Slf4jLogger started
+2017-05-11 17:33:44,640 DEBUG logger log1-Slf4jLogger started
+2017-05-11 17:33:44,649 DEBUG Default Loggers started
+2017-05-11 17:33:44,788 INFO Starting remoting
+2017-05-11 17:33:45,987 ERROR failed to bind to /192.168.0.18:24321, shutting down Netty transport
+2017-05-11 17:33:46,005 ERROR Remoting error: [Startup failed] [
+akka.remote.RemoteTransportException: Startup failed
+	at akka.remote.Remoting.akka$remote$Remoting$$notifyError(Remoting.scala:145)
+	at akka.remote.Remoting.start(Remoting.scala:211)
+	at akka.remote.RemoteActorRefProvider.init(RemoteActorRefProvider.scala:212)
+	at akka.actor.ActorSystemImpl.liftedTree2$1(ActorSystem.scala:656)
+	at akka.actor.ActorSystemImpl._start$lzycompute(ActorSystem.scala:653)
+	at akka.actor.ActorSystemImpl._start(ActorSystem.scala:653)
+	at akka.actor.ActorSystemImpl.start(ActorSystem.scala:669)
+	at akka.actor.ActorSystem$.apply(ActorSystem.scala:142)
+	at akka.actor.ActorSystem$.apply(ActorSystem.scala:119)
+	at relaySystem$.delayedEndpoint$relaySystem$1(Main.scala:107)
+	at relaySystem$delayedInit$body.apply(Main.scala:102)
+	at scala.Function0$class.apply$mcV$sp(Function0.scala:34)
+	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:12)
+	at scala.App$$anonfun$main$1.apply(App.scala:76)
+	at scala.App$$anonfun$main$1.apply(App.scala:76)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.generic.TraversableForwarder$class.foreach(TraversableForwarder.scala:35)
+	at scala.App$class.main(App.scala:76)
+	at relaySystem$.main(Main.scala:102)
+	at relaySystem.main(Main.scala)
+Caused by: org.jboss.netty.channel.ChannelException: Failed to bind to: /192.168.0.18:24321
+	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	at akka.remote.transport.netty.NettyTransport$$anonfun$listen$1.apply(NettyTransport.scala:417)
+	at akka.remote.transport.netty.NettyTransport$$anonfun$listen$1.apply(NettyTransport.scala:413)
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:237)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Success.map(Try.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:409)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss$RegisterTask.run(NioServerBoss.java:193)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.processTaskQueue(AbstractNioSelector.java:391)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:315)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss.run(NioServerBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]
+2017-05-11 17:33:46,016 INFO Shutting down remote daemon.
+2017-05-11 17:33:46,023 INFO Remote daemon shut down; proceeding with flushing remote transports.
+2017-05-11 17:33:46,027 ERROR Remoting system has been terminated abrubtly. Attempting to shut down transports
+2017-05-11 17:33:46,028 INFO Remoting shut down
+2017-05-11 17:33:46,032 INFO Remoting shut down.
+2017-05-11 17:33:46,035 DEBUG shutting down: StandardOutLogger started
+2017-05-11 17:45:14,426 INFO ....................relaySystem start !!....................
+2017-05-11 17:45:15,176 INFO Slf4jLogger started
+2017-05-11 17:45:15,192 DEBUG logger log1-Slf4jLogger started
+2017-05-11 17:45:15,192 DEBUG Default Loggers started
+2017-05-11 17:45:15,285 INFO Starting remoting
+2017-05-11 17:45:15,770 INFO Remoting started; listening on addresses :[akka.tcp://relayRemote@192.168.0.28:24321]
+2017-05-11 17:45:15,770 INFO Remoting now listens on addresses: [akka.tcp://relayRemote@192.168.0.28:24321]
+2017-05-11 17:45:15,785 INFO *********************** supervisor start ***************************
+2017-05-11 17:45:16,004 INFO RuleEngine preStart !!!
+2017-05-11 17:45:16,567 DEBUG Successfully bound to /192.168.0.28:22080
+2017-05-11 17:45:16,567 DEBUG Successfully bound to /192.168.0.28:22070
+2017-05-11 17:45:16,567 INFO listening on port 22080
+2017-05-11 17:45:16,567 INFO listening on port 22070
+2017-05-11 17:45:47,870 DEBUG Associated [akka.tcp://relayRemote@192.168.0.28:24321] <- [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:45:48,026 DEBUG Using serializer[akka.serialization.JavaSerializer] for message [akka.actor.ActorIdentity]
+2017-05-11 17:45:50,168 DEBUG Using serializer[akka.serialization.JavaSerializer] for message [akka.remote.RemoteWatcher$HeartbeatRsp]
+2017-05-11 17:45:51,256 INFO fromTMG :  mg-1 
+2017-05-11 17:46:01,570 DEBUG New connection accepted
+2017-05-11 17:46:01,601 INFO received connection from /192.168.0.4:35004
+2017-05-11 17:46:02,509 INFO GatewayHandler preStart !!!
+2017-05-11 17:46:15,025 INFO accept gw : 2
+2017-05-11 17:46:15,212 INFO fromTG : '2'
+2017-05-11 17:46:24,125 INFO fromGW -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:46:31,966 INFO fromGW -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:46:32,966 INFO fromGW -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:46:33,950 INFO fromTGH :  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:46:35,548 INFO Direction_TMG
+2017-05-11 17:46:35,638 INFO fromRE -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:46:35,638 DEBUG Using serializer[akka.serialization.JavaSerializer] for message [java.lang.String]
+2017-05-11 17:48:49,586 INFO fromTGH :  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:48:49,758 INFO Message [akka.remote.transport.AssociationHandle$InboundPayload] from Actor[akka://relayRemote/deadLetters] to Actor[akka://relayRemote/system/transports/akkaprotocolmanager.tcp0/akkaProtocol-tcp%3A%2F%2FrelayRemote%40192.168.0.28%3A1122-1#317729470] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:48:49,914 DEBUG Disassociated [akka.tcp://relayRemote@192.168.0.28:24321] <- [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:48:50,585 WARN Association with remote system [akka.tcp://relayRemote@192.168.0.28:34568] has failed, address is now gated for [5000] ms. Reason: [Disassociated] 
+2017-05-11 17:48:50,585 DEBUG New connection accepted
+2017-05-11 17:48:50,585 INFO received connection from /192.168.0.2:55230
+2017-05-11 17:48:50,585 INFO GatewayHandler preStart !!!
+2017-05-11 17:48:50,796 DEBUG Disassociated [akka.tcp://relayRemote@192.168.0.28:24321] <- [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:48:50,796 INFO Message [akka.remote.RemoteWatcher$HeartbeatRsp] from Actor[akka://relayRemote/system/remote-watcher#778924175] to Actor[akka.tcp://relayRemote@192.168.0.28:34568/system/remote-watcher#-1889088345] was not delivered. [2] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:48:50,796 INFO Message [akka.remote.RemoteWatcher$HeartbeatRsp] from Actor[akka://relayRemote/system/remote-watcher#778924175] to Actor[akka.tcp://relayRemote@192.168.0.28:34568/system/remote-watcher#-1889088345] was not delivered. [3] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:48:50,796 INFO Message [akka.remote.RemoteWatcher$HeartbeatRsp] from Actor[akka://relayRemote/system/remote-watcher#778924175] to Actor[akka.tcp://relayRemote@192.168.0.28:34568/system/remote-watcher#-1889088345] was not delivered. [4] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:48:50,796 INFO Message [akka.remote.RemoteWatcher$HeartbeatRsp] from Actor[akka://relayRemote/system/remote-watcher#778924175] to Actor[akka.tcp://relayRemote@192.168.0.28:34568/system/remote-watcher#-1889088345] was not delivered. [5] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:48:50,796 INFO Message [akka.remote.RemoteWatcher$HeartbeatRsp] from Actor[akka://relayRemote/system/remote-watcher#778924175] to Actor[akka.tcp://relayRemote@192.168.0.28:34568/system/remote-watcher#-1889088345] was not delivered. [6] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:48:50,796 INFO Message [akka.remote.RemoteWatcher$HeartbeatRsp] from Actor[akka://relayRemote/system/remote-watcher#778924175] to Actor[akka.tcp://relayRemote@192.168.0.28:34568/system/remote-watcher#-1889088345] was not delivered. [7] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:48:50,812 INFO Message [akka.remote.RemoteWatcher$HeartbeatRsp] from Actor[akka://relayRemote/system/remote-watcher#778924175] to Actor[akka.tcp://relayRemote@192.168.0.28:34568/system/remote-watcher#-1889088345] was not delivered. [8] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:48:50,812 INFO Message [akka.remote.RemoteWatcher$HeartbeatRsp] from Actor[akka://relayRemote/system/remote-watcher#778924175] to Actor[akka.tcp://relayRemote@192.168.0.28:34568/system/remote-watcher#-1889088345] was not delivered. [9] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:48:50,812 INFO Message [akka.remote.RemoteWatcher$HeartbeatRsp] from Actor[akka://relayRemote/system/remote-watcher#778924175] to Actor[akka.tcp://relayRemote@192.168.0.28:34568/system/remote-watcher#-1889088345] was not delivered. [10] dead letters encountered, no more dead letters will be logged. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2017-05-11 17:49:01,017 INFO No direction msg!!
+2017-05-11 17:49:01,017 INFO accept gw : 2
+2017-05-11 17:49:12,340 INFO ....................relaySystem start !!....................
+2017-05-11 17:49:13,058 INFO Slf4jLogger started
+2017-05-11 17:49:13,074 DEBUG logger log1-Slf4jLogger started
+2017-05-11 17:49:13,074 DEBUG Default Loggers started
+2017-05-11 17:49:13,183 INFO Starting remoting
+2017-05-11 17:49:13,933 INFO Remoting started; listening on addresses :[akka.tcp://relayRemote@192.168.0.28:24321]
+2017-05-11 17:49:13,949 INFO Remoting now listens on addresses: [akka.tcp://relayRemote@192.168.0.28:24321]
+2017-05-11 17:49:13,949 INFO *********************** supervisor start ***************************
+2017-05-11 17:49:13,965 INFO RuleEngine preStart !!!
+2017-05-11 17:49:13,996 DEBUG Successfully bound to /192.168.0.28:22070
+2017-05-11 17:49:13,996 DEBUG Successfully bound to /192.168.0.28:22080
+2017-05-11 17:49:13,996 INFO listening on port 22080
+2017-05-11 17:49:13,996 INFO listening on port 22070
+2017-05-11 17:49:26,871 DEBUG Associated [akka.tcp://relayRemote@192.168.0.28:24321] <- [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:49:27,012 DEBUG Using serializer[akka.serialization.JavaSerializer] for message [akka.actor.ActorIdentity]
+2017-05-11 17:49:27,074 INFO fromTMG :  mg-1 
+2017-05-11 17:49:27,465 DEBUG Using serializer[akka.serialization.JavaSerializer] for message [akka.remote.RemoteWatcher$HeartbeatRsp]
+2017-05-11 17:49:30,652 DEBUG New connection accepted
+2017-05-11 17:49:30,684 INFO received connection from /192.168.0.2:39306
+2017-05-11 17:49:30,684 INFO GatewayHandler preStart !!!
+2017-05-11 17:49:30,684 INFO accept gw : 2
+2017-05-11 17:49:30,684 INFO fromTG : '2'
+2017-05-11 17:49:34,027 INFO fromGW -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:34,027 INFO fromTGH :  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:34,231 INFO Direction_TMG
+2017-05-11 17:49:34,231 INFO fromRE -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:34,231 DEBUG Using serializer[akka.serialization.JavaSerializer] for message [java.lang.String]
+2017-05-11 17:49:36,982 INFO fromGW -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:36,982 INFO fromTGH :  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:36,998 INFO Direction_TMG
+2017-05-11 17:49:37,014 INFO fromRE -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:39,986 INFO fromGW -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:39,986 INFO fromTGH :  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:40,002 INFO Direction_TMG
+2017-05-11 17:49:40,017 INFO fromRE -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:42,994 INFO fromGW -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:42,994 INFO fromTGH :  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:49:42,994 INFO Direction_TMG
+2017-05-11 17:49:43,010 INFO fromRE -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:51:20,651 DEBUG Disassociated [akka.tcp://relayRemote@192.168.0.28:24321] <- [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:51:20,667 WARN Association with remote system [akka.tcp://relayRemote@192.168.0.28:34568] has failed, address is now gated for [5000] ms. Reason: [Disassociated] 
+2017-05-11 17:51:20,682 DEBUG Disassociated [akka.tcp://relayRemote@192.168.0.28:24321] <- [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:51:37,351 DEBUG Associated [akka.tcp://relayRemote@192.168.0.28:24321] <- [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:51:37,445 DEBUG Associated [akka.tcp://relayRemote@192.168.0.28:24321] -> [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:51:37,445 DEBUG Drained buffer with maxWriteCount: 50, fullBackoffCount: 1, smallBackoffCount: 0, noBackoffCount: 0 , adaptiveBackoff: 1000
+2017-05-11 17:51:37,492 INFO fromTMG :  mg-1 
+2017-05-11 17:51:42,789 INFO fromGW -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:51:42,789 INFO fromTGH :  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:51:42,804 INFO Direction_TMG
+2017-05-11 17:51:42,804 INFO fromRE -  '{"CONTENT": "48e44f10", "CALL-ID": 0, "SWITCH-ID": "2", "CMD": "CARD_AUTH", "GATEWAY-ID": "2"}'
+2017-05-11 17:51:43,586 INFO fromTMG -  '{"CMD":"CARD_AUTH","GATEWAY-ID":"2","CONTENT":"AUTH_SUCCESS","SWITCH-ID":"2","CALL-ID":0.0}'
+2017-05-11 17:51:43,601 INFO fromTMG :  '{"CMD":"CARD_AUTH","GATEWAY-ID":"2","CONTENT":"AUTH_SUCCESS","SWITCH-ID":"2","CALL-ID":0.0}'
+2017-05-11 17:51:43,601 INFO fromRE -  '{"CMD":"CARD_AUTH","GATEWAY-ID":"2","CONTENT":"AUTH_SUCCESS","SWITCH-ID":"2","CALL-ID":0.0}'
+2017-05-11 17:52:02,631 DEBUG Disassociated [akka.tcp://relayRemote@192.168.0.28:24321] -> [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:52:02,631 DEBUG Disassociated [akka.tcp://relayRemote@192.168.0.28:24321] <- [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:52:02,631 WARN Association with remote system [akka.tcp://relayRemote@192.168.0.28:34568] has failed, address is now gated for [5000] ms. Reason: [Disassociated] 
+2017-05-11 17:52:02,631 DEBUG Disassociated [akka.tcp://relayRemote@192.168.0.28:24321] <- [akka.tcp://relayRemote@192.168.0.28:34568]
+2017-05-11 17:52:02,631 DEBUG Disassociated [akka.tcp://relayRemote@192.168.0.28:24321] -> [akka.tcp://relayRemote@192.168.0.28:34568]
